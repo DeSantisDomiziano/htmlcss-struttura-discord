@@ -16,6 +16,12 @@
     --ds-bgnav: #add8e6;
     --ds-colornav: #daa520;
     --ds-bgcardheader: #ee82ee;
+    /* COLOR MAIN */
+    --ds-bgcards: #000000;
+    --ds-bgmaincard: #1e90ff;
+    --ds-bgsecondarycard: #ffc0cb;
+    --ds-bgroweven: #d3d3d3;
+
 }
 
 /* #endregion palette color */
@@ -39,6 +45,19 @@
     background-color: var(--ds-bgcardheader);
 }
 
+/* MAIN */
+.debug .cards {
+        background-color: var(--ds-bgcards);
+}
+
+.debug .main-card {
+    background-color: var(--ds-bgmaincard);
+}
+
+.debug .secondary-card {
+    background-color: var(--ds-bgsecondarycard);
+}
+
 /* #endregion debug */
 
 /* #region utilities */
@@ -48,6 +67,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.flex-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+} 
 
 
 .row-1 {
@@ -60,6 +84,26 @@
 
 a {
 text-decoration: none;
+}
+
+/* CARDS */
+.main-card {
+ width: 60%;
+}
+
+.secondary-card {
+    width: 40%;
+}
+
+.main-card,
+.secondary-card {
+    height: 100%;
+    border: 1px dotted black;
+}
+
+/* MAIN */
+section:nth-child(even) {
+    background-color: var(--ds-bgroweven);
 }
 
 /* #endregion utilities */
@@ -111,6 +155,12 @@ nav {
     width: 50vw;
 
 }
-
-
 /* #endregion header */
+
+/* #region main */
+
+.cards {
+    height: 44vh;
+}
+
+/* #endregion main */
