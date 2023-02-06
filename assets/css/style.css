@@ -1,5 +1,116 @@
+/* #region common rules */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* #endregion common rules */
+
+/* #region palette color */
+
+:root {
+    /* COLOR HEADER */
+    --ds-bgheader: #00008b;
+    --ds-bgnav: #add8e6;
+    --ds-colornav: #daa520;
+    --ds-bgcardheader: #ee82ee;
+}
+
+/* #endregion palette color */
+
+/* #region debug */
+
+/* HEADER */
+.debug > #app-header{
+    background-color: var(--ds-bgheader);
+}
+
+.debug .bar-nav {
+    background-color: var(--ds-bgnav);
+}
+
+.debug nav {
+    background-color: var(--ds-colornav);
+}
+
+.debug .card-header{
+    background-color: var(--ds-bgcardheader);
+}
+
+/* #endregion debug */
+
+/* #region utilities */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.row-1 {
+    height: 50vh;
+}
+
+.col-8 {
+    width: 66.7vw;
+}
+
+a {
+text-decoration: none;
+}
+
+/* #endregion utilities */
+
+/* #region header */
+
+/* NAV */
+.bar-nav{
+    height: 8vh;
+}
+
+nav {
+    height: 6vh;
+    justify-content: space-between !important;
+}
+
+.logo,
+.login {
+    height: 100%;
+    width: 15%;
+    border: 1px dotted black;
+}
+
+.menu {
+    height: 100%;
+    width: 70%;
+    border: 1px dotted black;
+}
+
+.menu-item {
+    padding: 0 2rem;
+}
+
+.logo {
+    justify-content: flex-start;
+}
+
+.login {
+    justify-content: flex-end;
+}
+
+/* CARD HEADER */
+#container-card-header {
+    height: 40vh;
+}
+
+.card-header{
+    height: 36vh;
+    width: 50vw;
+
+}
+
+
+/* #endregion header */
