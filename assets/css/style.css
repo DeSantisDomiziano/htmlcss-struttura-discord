@@ -22,6 +22,12 @@
     --ds-bgsecondarycard: #ffc0cb;
     --ds-bgroweven: #d3d3d3;
     --ds-bgbigcard: #228b22;
+    /* COLOR FOOTER */
+    --ds-bgfooter: #23272a;
+    --ds-bgprimarysection: #f08080;
+    --ds-bgsecondarysection: #20b2aa;
+    --ds-bglastfooter: #7fffd4;
+    --ds-bgbottonlastfooter: #7fffd4;
 
 }
 
@@ -44,10 +50,19 @@
 
 .debug .card-header{
     background-color: var(--ds-bgcardheader);
+    border: 2px dotted black;
 }
 
 /* MAIN */
-.debug .cards {
+.debug .main-card,
+.secondary-card,
+.biggest-card {
+    height: 100%;
+    border: 2px dotted black;
+}
+
+.debug .cards,
+.container {
         background-color: var(--ds-bgcards);
 }
 
@@ -62,20 +77,33 @@
 .debug .big-card {
     background-color: var(--ds-bgbigcard);
 }
+
+/* FOOTER */
+.card-primary-footer {
+    background-color: var(--ds-bgprimarysection);
+}
+
+.card-secondary-footer {
+    background-color: var(--ds-bgsecondarysection);
+}
 /* #endregion debug */
 
 /* #region utilities */
 
 .flex {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .flex-reverse {
-    display: flex;
     flex-direction: row-reverse;
 } 
+
+.flex,
+.flex-reverse,
+.flex-default {
+    display: flex;
+}
 
 
 .row-1 {
@@ -86,8 +114,21 @@
     height: 100vh;
 }
 
+.row-footer-1 {
+    height: 46vh;
+    border-bottom: 1px solid #d3d3d3;
+}
+
 .col-8 {
     width: 66.7vw;
+}
+
+.col-4 {
+    width: calc(100% / 3);
+}
+
+.col-2 {
+    width: calc(100% / 6);
 }
 
 a {
@@ -103,12 +144,6 @@ text-decoration: none;
     width: 40%;
 }
 
-.main-card,
-.secondary-card {
-    height: 100%;
-    border: 1px dotted black;
-}
-
 .biggest-card {
     height: 90vh;
 }
@@ -117,6 +152,7 @@ text-decoration: none;
 section:nth-child(even) {
     background-color: var(--ds-bgroweven);
 }
+
 
 /* #endregion utilities */
 
@@ -171,8 +207,32 @@ nav {
 
 /* #region main */
 
+
 .cards {
     height: 44vh;
 }
 
 /* #endregion main */
+
+/* #region footer */
+
+footer {
+    height: 60vh;
+    background-color: var(--ds-bgfooter);
+}
+
+.container {
+    height: 43vh;
+}
+
+.card-primary-footer {
+    height: 100%;
+    border: 2px dashed black;
+}
+
+.card-secondary-footer {
+    height: 100%;
+    border: 2px dashed black;
+}
+
+/* #endregion footer */
