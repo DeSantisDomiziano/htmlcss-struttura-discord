@@ -21,6 +21,7 @@
     --ds-bgmaincard: #1e90ff;
     --ds-bgsecondarycard: #ffc0cb;
     --ds-bgroweven: #d3d3d3;
+    --ds-bgbigcard: #228b22;
 
 }
 
@@ -58,6 +59,9 @@
     background-color: var(--ds-bgsecondarycard);
 }
 
+.debug .big-card {
+    background-color: var(--ds-bgbigcard);
+}
 /* #endregion debug */
 
 /* #region utilities */
@@ -76,6 +80,10 @@
 
 .row-1 {
     height: 50vh;
+}
+
+.row-2 {
+    height: 100vh;
 }
 
 .col-8 {
@@ -99,6 +107,10 @@ text-decoration: none;
 .secondary-card {
     height: 100%;
     border: 1px dotted black;
+}
+
+.biggest-card {
+    height: 90vh;
 }
 
 /* MAIN */
